@@ -1,0 +1,2 @@
+# SYZYGY-Site
+SYZYGY GAME 主页存档
