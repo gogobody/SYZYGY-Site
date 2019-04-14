@@ -13,7 +13,6 @@
     <title>SYZYGY Game </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="SYZYGY Game"/>
-
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <link rel="shortcut icon" href="favicon.ico">
 
@@ -168,7 +167,7 @@
                                 <p class="imgBox" style="padding:10%">
                                     <img width="150" height="150" src="images/help-3.png" alt="audience">
                                 </p>
-                                <p class="t-title">1、 中国地区发行</p>
+                                <p class="t-title">中国地区发行</p>
                                 <p>
                                     我们致力于将精品海外游戏引入中国。在中国，有超过30家主流手机应用商店以及较为特殊的市场营销环境。以微信为代表的社交应用，以抖音为代表的短视频应用，国内市场占有率几乎超过90%，每天超过2.5亿游戏玩家通过这两款超级应用选择游戏。我们的发行团队在业内拥有广泛的人脉积累，与各大渠道保持良好合作关系，我们将确保您的游戏获得应有的曝光度，帮助您的游戏走向成功。</p>
                             </blockquote>
@@ -182,7 +181,7 @@
                                 <p class="imgBox" style="padding:10%">
                                     <img width="150" height="150" src="images/help-1.png" alt="audience">
                                 </p>
-                                <p class="t-title">2、 产品调优与数据优化</p>
+                                <p class="t-title">产品调优与数据优化</p>
                                 <p>经验丰富的游戏运营团队，可以帮助您进行专业的产品调优、游戏设计优化、用户体验优化、数据优化、创意支持等工作。同时根据不同地区的玩家习惯及兴趣点等进行专业的本地化运营，更有效的将游戏产品与市场环境结合，帮助您打造极具吸引力且流畅游戏作品。以实力打造更优质精品，以专业谋求更快速发展。</p>
 <!--                                <ul class="t-ul" style="margin-left: -20px;text-align: left;">-->
 <!--                                    <li>拥有多年丰富的运营经验，优秀的数据分析和提升能力</li>-->
@@ -201,7 +200,7 @@
                                 <p class="imgBox" style="padding:10%">
                                     <img width="150" height="150" src="images/help-2.png" alt="audience">
                                 </p>
-                                <p class="t-title">3、 营销与变现</p>
+                                <p class="t-title">营销与变现</p>
                                 <p>依托领先的大数据分析技术和强大营销能力，我们可以实现对网络用户的精准定向及对广告资源的智能管理。同时我们也将提供较业内更为优厚的游戏营收分成，切实的提高游戏开发团队的收入，帮助制作团队打造更多优秀的游戏作品。</p>
                             </blockquote>
                         </div>
@@ -345,39 +344,59 @@
 <!-- Stellar -->
 <script src="js/jquery.stellar.min.js"></script>
 <script>
-    $.stellar({
-        // Set scrolling to be in either one or both directions
-        horizontalScrolling: false,
-        verticalScrolling: true,
+    $(function(){
+        const ua = navigator.userAgent, isMobileWebkit = /WebKit/.test(ua) && /Mobile/.test(ua);
+        if (isMobileWebkit) {
+            $('#scroller').stellar({
+                scrollProperty: 'transform',
+                positionProperty: 'transform',
+                horizontalScrolling: false,
+                verticalOffset: 0
+            });
+        }else {
+            $.stellar({
+                // Set scrolling to be in either one or both directions
+                horizontalScrolling: false,
+                verticalScrolling: true,
 
-        // Set the global alignment offsets
-        horizontalOffset: 50,
-        verticalOffset: 0,
+                // Set the global alignment offsets
+                horizontalOffset: 0,
+                verticalOffset: 0,
 
-        // Refreshes parallax content on window load and resize
-        responsive: false,
+                // Refreshes parallax content on window load and resize
+                responsive: false,
 
-        // Select which property is used to calculate scroll.
-        // Choose 'scroll', 'position', 'margin' or 'transform',
-        // or write your own 'scrollProperty' plugin.
-        scrollProperty: 'scroll',
+                // Select which property is used to calculate scroll.
+                // Choose 'scroll', 'position', 'margin' or 'transform',
+                // or write your own 'scrollProperty' plugin.
+                scrollProperty: 'scroll',
 
-        // Select which property is used to position elements.
-        // Choose between 'position' or 'transform',
-        // or write your own 'positionProperty' plugin.
-        positionProperty: 'position',
+                // Select which property is used to position elements.
+                // Choose between 'position' or 'transform',
+                // or write your own 'positionProperty' plugin.
+                positionProperty: 'position',
 
-        // Enable or disable the two types of parallax
-        parallaxBackgrounds: true,
-        parallaxElements: true,
+                // Enable or disable the two types of parallax
+                parallaxBackgrounds: true,
+                parallaxElements: true,
 
-        // Hide parallax elements that move outside the viewport
-        hideDistantElements: true,
+                // Hide parallax elements that move outside the viewport
+                hideDistantElements: true,
 
-        // Customise how elements are shown and hidden
-        hideElement: function($elem) { $elem.hide(); },
-        showElement: function($elem) { $elem.show(); }
+                // Customise how elements are shown and hidden
+                hideElement: function($elem) { $elem.hide(); },
+                showElement: function($elem) { $elem.show(); }
+            });
+        }
+
+
+        //Prevent text selection
+        $(document).mousedown(function(e){
+            e.preventDefault();
+        });
     });
+
+
 </script>
 <!-- Superfish -->
 <script src="js/hoverIntent.js"></script>

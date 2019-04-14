@@ -125,8 +125,9 @@ figure {
 .fh5co-cover.text-center {
     z-index: 2;
     /*padding-bottom: 56.25%;*/
-    /*height: 0;*/
-    background: url(../images/cover-bg.jpg) no-repeat right 50px;
+    /*height: 0; 100% 50px*/
+    /*background-size: cover;*/
+    background: url(../images/cover-bg.jpg) no-repeat 100% 50px fixed;
 }
 #offcanvas-menu li a{
     padding: 10px 12px;
@@ -139,7 +140,6 @@ figure {
     color: white;
 }
 .fh5co-cover {
-    /*background-size: cover;*/
     position: relative;
 
 }
@@ -152,7 +152,7 @@ figure {
         z-index: 2;
         /*padding-bottom: 56.25%;*/
         /*height: 0;*/
-        background: url(../images/cover-bg.jpg) no-repeat 85% 50px;
+        background: url(../images/cover-bg.jpg) no-repeat 85% 50px fixed!important;
     }
 }
 
@@ -1928,7 +1928,7 @@ figure {
     transition: all 100ms ease-out 0s;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 768px) {
     .section-services .service-item {
         padding: 20px;
     }
@@ -1959,7 +1959,7 @@ figure {
     color: #03c4eb;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 768px) {
     .section-services .service-item .service-image {
         float: none;
         margin-bottom: 30px;
@@ -1984,7 +1984,7 @@ figure {
     color: #777777;*/
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 768px) {
     .section-services .service-item .service-content {
         text-align: center;
         overflow: auto;

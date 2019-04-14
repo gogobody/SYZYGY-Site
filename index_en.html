@@ -175,7 +175,7 @@ At present, we have established localized distribution teams or strategic partne
                                 <p class="imgBox" style="padding:10%">
                                     <img width="150" height="150" src="images/help-3.png" alt="audience">
                                 </p>
-                                <p class="t-title">1、Operating games in China</p>
+                                <p class="t-title">Operating games in China</p>
                                 <p>
                                     We are devoting to introduce excellent overseas game into China market. China’s marketing environment is special. More than 30 major mobile application store. Social applications represented by WeChat. Short video applications represented by Tik Tok. They have a billion subscribers and controls a little over 90 percent of the domestic market. More than 250 million gamers choose games through these two super apps every day. We have a strong team consisting of experienced distributor, we are moving forward in bring success to producer with pride and confidence.</p>
                             </blockquote>
@@ -189,7 +189,7 @@ At present, we have established localized distribution teams or strategic partne
                                 <p class="imgBox" style="padding:10%">
                                     <img width="150" height="150" src="images/help-1.png" alt="audience">
                                 </p>
-                                <p class="t-title">2、 产品调优与数据优化</p>
+                                <p class="t-title">产品调优与数据优化</p>
                                 <ul class="t-ul" style="margin-left: -20px;text-align: left;">
                                     <li>拥有多年丰富的运营经验，优秀的数据分析和提升能力</li>
                                     <li>根据本地文化特色、玩家习惯及兴趣点等进行本地化运营。精准掌握与分析国内玩家产品喜好方向。</li>
@@ -207,7 +207,7 @@ At present, we have established localized distribution teams or strategic partne
                                 <p class="imgBox" style="padding:10%">
                                     <img width="150" height="150" src="images/help-2.png" alt="audience">
                                 </p>
-                                <p class="t-title">3、 营销与变现</p>
+                                <p class="t-title">营销与变现</p>
                                 <p>我们依托领先的大数据分析技术和网络营销技术，实现对网络用户的精准定向、对广告资源的智能管理。同时我们也将提供较业内更为优厚的收入分成给开发者提供更高额的收入。</p>
                             </blockquote>
                         </div>
@@ -351,39 +351,47 @@ At present, we have established localized distribution teams or strategic partne
 <!-- Stellar -->
 <script src="js/jquery.stellar.min.js"></script>
 <script>
-    $.stellar({
-        // Set scrolling to be in either one or both directions
-        horizontalScrolling: false,
-        verticalScrolling: true,
+    $(function(){
+        const ua = navigator.userAgent, isMobileWebkit = /WebKit/.test(ua) && /Mobile/.test(ua);
+        if (isMobileWebkit) {
+        }else {
+            $.stellar({
+                // Set scrolling to be in either one or both directions
+                horizontalScrolling: false,
+                verticalScrolling: true,
 
-        // Set the global alignment offsets
-        horizontalOffset: 50,
-        verticalOffset: 0,
+                // Set the global alignment offsets
+                horizontalOffset: 50,
+                verticalOffset: 0,
 
-        // Refreshes parallax content on window load and resize
-        responsive: false,
+                // Refreshes parallax content on window load and resize
+                responsive: false,
 
-        // Select which property is used to calculate scroll.
-        // Choose 'scroll', 'position', 'margin' or 'transform',
-        // or write your own 'scrollProperty' plugin.
-        scrollProperty: 'scroll',
+                // Select which property is used to calculate scroll.
+                // Choose 'scroll', 'position', 'margin' or 'transform',
+                // or write your own 'scrollProperty' plugin.
+                scrollProperty: 'scroll',
 
-        // Select which property is used to position elements.
-        // Choose between 'position' or 'transform',
-        // or write your own 'positionProperty' plugin.
-        positionProperty: 'position',
+                // Select which property is used to position elements.
+                // Choose between 'position' or 'transform',
+                // or write your own 'positionProperty' plugin.
+                positionProperty: 'position',
 
-        // Enable or disable the two types of parallax
-        parallaxBackgrounds: true,
-        parallaxElements: true,
+                // Enable or disable the two types of parallax
+                parallaxBackgrounds: true,
+                parallaxElements: true,
 
-        // Hide parallax elements that move outside the viewport
-        hideDistantElements: true,
+                // Hide parallax elements that move outside the viewport
+                hideDistantElements: true,
 
-        // Customise how elements are shown and hidden
-        hideElement: function($elem) { $elem.hide(); },
-        showElement: function($elem) { $elem.show(); }
+                // Customise how elements are shown and hidden
+                hideElement: function($elem) { $elem.hide(); },
+                showElement: function($elem) { $elem.show(); }
+            });
+        }
+
     });
+
 </script>
 <!-- Superfish -->
 <script src="js/hoverIntent.js"></script>
