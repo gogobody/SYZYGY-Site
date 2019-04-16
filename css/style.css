@@ -152,7 +152,7 @@ figure {
         z-index: 2;
         /*padding-bottom: 56.25%;*/
         /*height: 0;*/
-        background: url(../images/cover-bg.jpg) no-repeat 85% 50px fixed!important;
+        background: url(../images/cover-bg.jpg) no-repeat 85% 50px scroll!important;
     }
 }
 
